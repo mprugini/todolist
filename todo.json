@@ -1,0 +1,6 @@
+{
+	"data":[
+	{task : "Learn AngularJS", description : "You have to practice more AngularJS", completed : false},
+	{task : "Build an app", description : "Try building more apps using AngularJS", completed : false}
+	]
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 4 - Todo list using AngularJS</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="main.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script type="text/javascript" src="todo.json"></script>
+	<script src="index.js"></script>
+	<meta charset="utf-8">
+	
+</head>
+<body ng-app="myApp" ng-controller="TodoCtrl">
+	<div class="container">
+		<div class="jumbtron">
+			<br>
+			<h3>Todo List Using AngularJS</h3>
+			<br>
+			<br>
+			<form ng-submit="todoAdd()" class="task_description">
+				<div class="form-group" style="width:100%">
+					<div class="col-sm-4">
+						<b>Add a task:</b> <input type="text" ng-model="todoTask" size="50" placeholder="Task Name" required>
+					</div>
+				</div>
+				<br>
+				<br>
+				<br>
+				<div class="form-group" style="width:100%"> 
+					<div class="col-sm-4">
+						<b>Add a Description:</b> <input type="text" ng-model="todoDescription" size="50" placeholder="Task Description" required>
+					</div>
+				</div>
+				<br>
+				<br>
+				<br>
+				<div class="btn">
+					<input type="submit" value="Add New">
+				</div>
+			</form>
+			<br>
+		</div>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6">
+					<h1 align="center">All Tasks</h1>
+					<table border = "1" align = "center" style = "width: 100%; cell-spacing: 50px; text-align:center; height: 40%;">
+						<tr ng-repeat = "x in todoList">
+							<td>
+								<b>Item:</b> {{x.task}} <br> 
+								<b>Description:</b> {{x.description}}
+							</td>
+							<td><input type = "checkbox" ng-model = "x.complete"></td>
+						</tr>
+					</table>
+				</div>
+				
+				<div class="col-sm-6">
+					<h1 align="center">All Completed Tasks</h1>
+					<table border = "1" align = "center" style = "width: 100%; cell-spacing: 50px; text-align:center; height: 40%;">
+						<tr ng-repeat = "x in list2">
+							<td>
+								<b>Item:</b> {{x.task}} <br> 
+								<b>Description:</b> {{x.description}}
+							</td>
+							
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-bottom">
+		<p><button ng-click="remove()">Remove marked</button></p>
+		<p><button ng-click="addToList()">Mark as completed</button></p>
+	</div>
+</body>
+
+</html>

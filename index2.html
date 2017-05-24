@@ -1,0 +1,6 @@
+<table border = 0 align = "center" style = "width: 40%;cell-spacing:50px;text-align:center;height: 40%;">
+    <tr ng-repeat = "x in list">
+        <td><b>Item:</b> {{x.task}} <br> <b>Description:</b> {{x.description}}</td>
+        <td><input type = "checkbox" ng-model = "x.done"></td>
+    </tr>
+</table>

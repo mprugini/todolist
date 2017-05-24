@@ -1,0 +1,41 @@
+body{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 15px;
+	line-height:1.4285;
+	background: #13756D;
+}
+
+
+h3{
+	text-align:center;
+}
+
+form{
+	margin: 0 auto; 
+	width:400px;
+}
+
+.jumbtron{
+	background: #55B6AE;
+	width: 100%;
+	padding-top:30px;
+	padding-bottom:30px;
+	margin-bottom: 30px;
+	color: inherit;
+}
+
+.btn {
+	text-align:center;
+}
+
+.container-fluid{
+	background: #65d8cb;
+	padding-bottom:30px;
+	margin-bottom:30px;
+}
+
+.container-bottom{
+	text-align:center;
+	background: #13756D;
+	
+}
